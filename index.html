@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel = "stylesheet" href = "styleI.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+            <script>
+                
+        
+                function person(name, age){
+                    this.name = name;
+                    this.age = age;
+                }
+
+
+                var joseph = new person("joseph joestar", 24, "blah blah");
+                var josuke = new person("Josuke Higashikata", 19);
+                josuke.blah = "something";
+
+                var people = [];
+                people.push(joseph);
+                people.push(josuke);
+
+                var samePeople = [joseph, josuke];
+                var andrew = new person();
+                andrew.age = 36;
+                andrew.name = "andrew";
+                var otherPeople = [
+                    {
+                        name: "jose",
+                        age: 20
+                    },
+                    // {
+                    //     name: "andrew", 
+                    //     age: 36
+                    // }
+                    andrew
+                ];
+
+                function persona (stand, user, time){
+                    this.stand = stand;
+                    this.user = user;
+                    this.time = time;
+                    this.timeUntilRetired = timeleft;
+                }
+                function timeleft(){
+                    var amountTime = 25 - this.time;
+                    return amountTime;
+                }
+
+                var jojo = new persona(" star platinum ", " jotaro ", 18);
+                var tarot = new persona("arsene", "joker", 19);
+
+                </script>
+
+    </head>
+    <body>
+
+            <nav>
+                    <div class="logo">
+                        <h4>The Nav</h4>
+                    </div>
+                    <ul class = "nav-links">
+                        <li>
+                            <a href="parallax.html">Parallax</a>
+                        </li>
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="../Bootstrap_website/index.html">Bootstrap</a>
+                        </li>
+                        <li>
+                            <a href="../New Shopping/src/shopping3.html">Shopping</a></li>
+                    </ul>
+                </nav>
+            <h1>This website and Nav are a Test</h1>
+            <div>This is a test for a nav bar, certain function in JS, and links to <br>
+                 the old parrallax page, the New shopping program, aswell as some other programs</div>
+                <P>the goal is to document and create a seamless website with each project (that isn't directly PDXNXT related<br>
+                be all in one simple place. Hopefully I will keep this updated and add new items to the nav bar as time goes on.</P>
+                <p>(see code) *name of functions should be redone to fit their functionality*</p>
+                <h3>Pumped up Kicks</h3>
+
+
+
+            <p id = "kicks"></p>
+
+            <h3>Tarot/stands/names</h3>
+        <script>
+            
+
+            document.write("time until retired " + tarot.timeUntilRetired() + " stand name " + tarot.stand + " user " + tarot.user);
+
+            sayHelloAgain(people);
+            sayHelloAgain(samePeople);
+            sayHelloAgain(otherPeople);
+            document.write();
+
+
+            function sayHelloAgain(people){
+               // console.log(people);
+                // debugger;
+            }
+
+            var name ="jose"; //string
+            var last = "garcia"
+            var age =20; //integer
+            var canVote = true; //boolean
+            var gender = 'f'; //character
+            var activities = ["sports", "learning"]; 
+            var misc = [true, 20, "this a string"];
+            var sports = [["sports", "learning"]]
+            var sportsInitial ="sf";
+            var profile = {
+                name:"jose"
+            };
+
+            if(gender == 'm' || gender == 'M'){
+                document.write(" male");
+            }
+
+            else if(gender == 'f'){
+                document.write("<br> female ");
+            }
+
+            else{
+                document.write("UNKNOWN");
+            }
+
+            if(gender == 'm' && age == 20){
+                document.write("you are a male of age 20");
+            }
+
+            if(gender != 'm'){
+                document.write(" you are not a male  <br>");
+            }
+
+            if(
+                (gender == 'm' || gender == 'f') 
+                && age <= 18){
+                document.write("you are a minor")
+            }
+
+            switch (sportsInitial){
+                
+                case "ny":
+                    document.write("New York");
+                    break;
+
+                case "sf":
+                    document.write("San Fran");
+                    break;
+
+                case "or":
+                    document.write("Oregon");
+                    break;
+
+                default:
+                    document.write("UNKNOWN");
+            }
+            document.write("<br>")
+            var rows =10;
+            document.write("<h3>Star Pattern</h3>")
+            for(i =1; i <= rows; ++i){
+                for ( j = 1; j <= i; ++j){
+                    document.write("*");
+                } 
+                document.write("<br>");
+            }
+
+           // <!---->
+
+            for(i = 1; i <= rows; ++i){
+                for (j = i; j <= rows; ++j){
+                    document.write("*");
+                }
+                document.write("<br>");
+            }
+
+            function pop(){
+                alert("boo! ha gotcha");
+            }
+
+
+            /*function panda(x){
+                alert(x + " are cool");
+            }
+            panda("bears");
+            panda("dogs");
+            panda("cows");*/
+document.write("<h3>Who better than who? + some joining</h3>")
+            function banana(one, two){
+                document.write(one + " is better than " + two + "<br>");
+            }
+
+            banana("jose", "rico");
+            banana("josuke", "koichi");
+            banana("Ps4", "xbox");
+
+
+            function tooeasy(){
+                return "gametime";
+            }
+            
+            document.write(tooeasy() + "<br>");
+
+
+            function addNumber(a,b){
+                var c = a+b;
+                return c;
+            }
+            document.write(addNumber("tar","get") + "<br>"); //spells target. replace "tar" and "get" with numbers to add them up and print sum
+
+
+            function doFirst(){
+                document.write(" yo im first in the function list");
+            }
+            
+            function doSecond(){
+                document.write(" yo this should come after the first in the function list");
+            }
+            
+            function start(){
+                doFirst();
+                document.write("<br>")
+                doSecond();
+            }
+            document.write("<h3>Function list</h3>")
+            start();
+
+            document.write("<h3>Math (Look at code)</h3>")
+            document.write("<p>math = 45 <br> math += 55 <br> math -= 50 <br> math *= 2 <br> math /=4 </p>")
+            var math = 45;
+            math += 55;
+            math -= 50;
+            math *= 2;
+            math /= 4;
+
+            document.write("<br>" + math);
+
+
+            if( (name == "jose") && (last == "garcia") ){
+                document.write("<br>" + "so your name is " + last + " " + name + "?")
+            }
+
+            var fam = "carlos"
+            switch (fam){
+                case "nayana":
+                    document.write("nayana baba yaga");
+                    break;
+
+                case "rico":
+                    document.write("rico suavecito");
+                    break;
+
+                case "carlos":
+                    document.write("too slow for the fox man");
+                    break;
+
+                default:
+                    document.write("UNKNOWN");
+            }
+            document.write("<h3>Looping function</h3>")
+            document.write("prints the text 10 times")
+            for (x = 0; x < 10; x++){
+                document.write("<br> mama mia pizzeria ")
+            }
+
+            var numApples = 1;
+            document.write("<br>")
+            while(numApples <= 10){
+                document.write(numApples + " how you like them apples <br>");
+                numApples++;
+            }
+
+
+            var cheese = 5;
+            do{
+                document.write(cheese + " sup <br>");
+                cheese++;
+            }while(cheese <= 20);
+
+
+           var tuna = "i am a tuna fish";
+           document.write(tuna.length);
+
+           var bois = new Array("jose", "jamal", "jacoby", "jordan");
+           var fem = new Array("maceria", "lindsey", "selena", "delilah");
+
+           var party = fem.concat(bois);
+            document.write("<h3>Name Print</h3>");
+            document.write("<p>this concatinates 2 arrays, and gets the selected array indexed name out of it</p>")
+           document.write(party[5]);
+
+
+           var movies = new Array("pacfic rim", " tron", " kingsglaive", " matrix", " fast and furious");
+
+           var string1 = movies.join(" - ");
+
+           document.write("<br>" + string1)
+           movies.pop();
+           document.write("<br>" + movies)
+
+           var bp = Array("head","shoulder", "knees", "toes");
+
+           bp.reverse();
+           bp.push("tongue", "liver");
+           bp.sort();
+
+           document.write("<br>" + bp)
+// prompt box that allows user to create their name as a variable for later
+         /* var namePrompt = prompt("enter your name: ", " ");
+           document.write("<br>" + "hello " + namePrompt);
+
+           var array = new Array(3);
+
+           for(i=0; i < 3; i++){
+               array[i] = prompt("add something to the array:", " ");
+           }
+
+           document.write(array[0] + array[1] +array[2]);*/
+//-------------------------------------------------------------------------------------------
+           var shoes, txt, slength;
+           shoes = ["Nike", "Addidas", "Converse", "Vans"];
+           shoes.push("Reebok");
+           slength = shoes.length;
+           txt = "<ul>";
+
+           for(var i = shoes.length - 1; i >= 0; i--){
+               txt += "<li>" + shoes[i] + "</li>";
+           }
+           txt+="</ul>";
+
+
+           document.getElementById("kicks").innerHTML = txt
+/*
+            if(age >= 18){
+                document.write("you can vote");
+                
+            }
+            else{
+                document.write("you cannot vote");
+            }
+
+            for (let index = 0; index < activities.length; index++) {
+                const element = activities[index];
+                document.write(element)
+            }
+
+            var activitiesLength = activities.length;
+            var count = 0;
+            while(count < activitiesLength){
+                const element = activities[count];
+                document.write(element);
+                count++;
+            }
+
+sayHelloAgain("dog", 23)
+*/
+
+
+
+
+
+
+
+            
+            //document.write("hello world " + name);
+        </script>
+
+        
+        
+
+<form>
+        <input type = "button" value = "hit me" onClick = "alert('ouch man');" style="background-color: aquamarine;"/>
+    </form>
+
+
+        <form>
+            <input type = "button" value = "Click Me ;)" onclick = "pop()" style="background-color: aquamarine;">
+        </form>
+
+    </body>
+</html>
